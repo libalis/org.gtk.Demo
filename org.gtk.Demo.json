@@ -1,0 +1,26 @@
+{
+    "app-id": "org.gtk.Demo",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "command": "demo.pyw",
+    "modules": [
+        {
+            "name": "demo",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D demo.pyw /app/bin/demo.pyw"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "demo.pyw"
+                }
+            ]
+        }
+    ],
+    "finish-args": [
+        "--socket=x11",
+        "--socket=wayland"
+    ]
+}
